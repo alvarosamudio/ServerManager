@@ -63,12 +63,12 @@
       <item row="2" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>MySQL</string>
+         <string>MariaDB</string>
         </property>
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QPushButton" name="mysql">
+       <widget class="QPushButton" name="mariadb">
         <property name="text">
          <string>Restart</string>
         </property>

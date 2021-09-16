@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
 }
 void MainWindow::StatusUpdate(){
     pid_t apache = system("pidof -s apache2");
-    pid_t mysqld = system("pidof -s mysqld");
+    pid_t mysqld = system("pidof -s mariadb");
     pid_t ftp = system("pidof -s filezilla");
     if(apache != 256)
         ui->label_8->setText("Running");
@@ -79,7 +79,7 @@ void MainWindow::on_apache_clicked()
 
 void MainWindow::on_mysql_clicked()
 {
-    bash("service mysql restart");
+    bash("service mariadb restart");
 }
 
 void MainWindow::on_ftp_clicked()
@@ -90,7 +90,7 @@ void MainWindow::on_ftp_clicked()
 void MainWindow::on_startall_clicked()
 {
     bash("service apache2 restart");
-    bash("service mysql restart");
+    bash("service mariadb restart");
     bash("service filezilla restart");
 
 }
@@ -98,7 +98,7 @@ void MainWindow::on_startall_clicked()
 void MainWindow::on_stopall_clicked()
 {
     bash("service apache2 stop");
-    bash("service mysql stop");
+    bash("service mariadb stop");
     bash("service filezilla stop");
 }
 
