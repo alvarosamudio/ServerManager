@@ -18,3 +18,9 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+TRANSLATIONS += translations/servermanager_zh.ts \
+                translations/servermanager_es.ts \
+                translations/servermanager_pt.ts \
+                translations/servermanager_it.ts \
+                translations/servermanager_fr.ts
