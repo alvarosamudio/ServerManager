@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Server Manager
+Comment=Manage your local servers
+Exec=servermanager
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+Categories=Utility;

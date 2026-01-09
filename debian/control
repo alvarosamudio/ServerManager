@@ -1,0 +1,16 @@
+Source: servermanager
+Section: utils
+Priority: optional
+Maintainer: Alvaro Samudio <alvarosamudio@protonmail.com>
+Build-Depends: debhelper (>= 9), qt5-default, qttools5-dev-tools
+Standards-Version: 3.9.6
+Homepage: https://github.com/alvarosamudio/servermanager
+
+Package: servermanager
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Simple Server Manager
+  A simple graphical tool to manage Apache, MariaDB, and FTP services.
+  .
+  This application allows you to start, stop, and restart services
+  and check their status.

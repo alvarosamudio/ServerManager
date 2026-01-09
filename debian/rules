@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	qmake servermanager.pro
+
+override_dh_auto_build:
+	# Generate translations first
+	lupdate servermanager.pro
+	lrelease servermanager.pro
+	make
+
+override_dh_auto_install:
+	mkdir -p debian/servermanager/usr/bin
+	cp ServerManager debian/servermanager/usr/bin/servermanager
+	
+	mkdir -p debian/servermanager/usr/share/servermanager/translations
+	cp translations/*.qm debian/servermanager/usr/share/servermanager/translations/
+	
+	mkdir -p debian/servermanager/usr/share/applications
+	cp servermanager.desktop debian/servermanager/usr/share/applications/
